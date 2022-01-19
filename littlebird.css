@@ -18,6 +18,10 @@ a {
   color: #fff;
   font-style: normal;
 }
+a:hover{
+  color: #fff;
+  font-style: normal;
+}
 .whiteDesc {
   color: black;
   background-color: #eeebc9;
@@ -34,10 +38,11 @@ a {
   text-align: justify;
 }
 .logo {
-  width: 550px;
-  height: 500px;
+  width: 450px;
+  height: 400px;
   border-width: thick;
   border-color: black;
+  margin-top: 1px;
 }
 
 .bgimg-1,
@@ -53,7 +58,7 @@ a {
   background-size: cover;
 }
 .bgimg-1 {
-  background-image: url("springing cards.jpg");
+  background-image: url("oustideBuilding.jpg");
   min-height: 100%;
 }
 
@@ -88,6 +93,9 @@ a {
   width: 100%;
   text-align: center;
   color: #000;
+}
+.heading {
+  text-align: center;
 }
 
 .caption .name {
