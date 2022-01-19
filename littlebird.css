@@ -15,8 +15,9 @@ button {
   cursor: pointer;
 }
 a {
-  color: #fff;
-  font-style: normal;
+  color: #0D0D0D;
+  font-weight: normal;
+  font-variant: small-caps;
 }
 a:hover{
   color: #fff;
@@ -38,8 +39,8 @@ a:hover{
   text-align: justify;
 }
 .logo {
-  width: 450px;
-  height: 400px;
+  width: 250px;
+  height: 200px;
   border-width: thick;
   border-color: black;
   margin-top: 1px;
@@ -58,28 +59,28 @@ a:hover{
   background-size: cover;
 }
 .bgimg-1 {
-  background-image: url("oustideBuilding.jpg");
+  background-image: url("outsideBuilding.jpg");
   min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("crissAngel.jpg");
+  background-image: url("wood.jpg");
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("shinLimColinCloud.jpg");
+  background-image: url("map.png");
   min-height: 400px;
 }
 .bgimg-4 {
-  background-image: url("sleightOfHand.jpg");
+  background-image: url("wood.jpg");
   min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .bgimg-5 {
-  background-image: url("houdini.png");
+  background-image: url("wood.jpg");
   min-height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -95,6 +96,12 @@ a:hover{
   color: #000;
 }
 .heading {
+  text-align: center;
+  margin: auto;
+width: 50%;
+padding: 10%;
+}
+p {
   text-align: center;
 }
 
@@ -136,80 +143,4 @@ h3 {
   .bg-img-5 {
     background-attachment: scroll;
   }
-}
-* {
-  margin: 0; padding: 0;
-}
-body {
-  font-size: 100%;
-}
-.accordion {
-  width: 280px;
-}
-.accordion h1, h2, h3, h4 {
-  cursor: pointer;
-}
-.accordion h2, h3, h4 {
-  font-family: "News Cycle";
-}
-.accordion h1 {
-  padding: 10px 15px;
-  background-color: #333;
-  font-family: Lobster;
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: #f2884b;
-}
-.accordion h1:hover {
-  color: #f2884b;
-}
-.accordion h1:first-child {
-  border-radius: 10px 10px 0 0;
-}
-.accordion h1:last-of-type {
-  border-radius: 0 0 10px 10px;
-}
-.accordion h1:not(:last-of-type) {
-  border-bottom: 1px dotted #f27b48;
-}
-.accordion div, .accordion p {
-  display: none;
-}
-.accordion h2 {
-  padding: 5px 25px;
-  background-color: #f27b48;
-  font-size: 1.1rem;
-  color: #333;
-}
-.accordion h2:hover {
-  background-color: #A65E44;
-}
-.accordion h3 {
-  padding: 5px 30px;
-  background-color: #A65E44;
-  font-size: .9rem;
-  color: #ddd;
-}
-.accordion h3:hover {
-  background-color: #594343;
-}
-.accordion h4 {
-  padding: 5px 35px;
-  background-color: #594343;
-  font-size: .9rem;
-  color: #0D0D0D;
-}
-.accordion h4:hover {
-  background-color: #0D0D0D;
-}
-.accordion p {
-  padding: 15px 35px;
-  background-color: #ddd;
-  font-family: "Georgia";
-  font-size: .8rem;
-  color: #333;
-  line-height: 1.3rem;
-}
-.accordion .opened-for-codepen {
-  display: block;
 }
