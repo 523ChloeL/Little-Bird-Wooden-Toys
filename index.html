@@ -13,6 +13,26 @@
 <body>
   <div class="bgimg-1">
     <div class="heading">
+
+      <link href='https://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+      <aside class="accordion">
+      	<h1>News</h1>
+      	<div class="opened-for-codepen">
+      		<h2>News Item #1</h2>
+      		<div class="opened-for-codepen">
+      			<h3>News Item #1a</h3>
+      			<div>
+
+      			</div>
+      		</div>
+      	</div>
+      </aside>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
       <img class="logo" src="Main Logo.png"></img><br> <br>
       <button><a href="https://en.wikipedia.org/wiki/Harry_Houdini" target="_blank" rel="noopener noreferrer">Contact Us</a></button>
       <button><a href="https://en.wikipedia.org/wiki/Criss_Angel" target="_blank" rel="noopener noreferrer">Order Form</a></button>
@@ -73,6 +93,37 @@
       });
   </script>
   </script>
+
+
+<script>
+var headers = ["H1","H2","H3","H4","H5","H6"];
+
+$(".accordion").click(function(e) {
+  var target = e.target,
+      name = target.nodeName.toUpperCase();
+
+  if($.inArray(name,headers) > -1) {
+    var subItem = $(target).next();
+
+    //slideUp all elements (except target) at current depth or greater
+    var depth = $(subItem).parents().length;
+    var allAtDepth = $(".accordion p, .accordion div").filter(function() {
+      if($(this).parents().length >= depth && this !== subItem.get(0)) {
+        return true;
+      }
+    });
+    $(allAtDepth).slideUp("fast");
+
+    //slideToggle target content and adjust bottom border if necessary
+    subItem.slideToggle("fast",function() {
+        $(".accordion :visible:last").css("border-radius","0 0 10px 10px");
+    });
+    $(target).css({"border-bottom-right-radius":"0", "border-bottom-left-radius":"0"});
+  }
+});
+</script>
+
+
 </body>
 
 </html>
