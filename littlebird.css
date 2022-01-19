@@ -144,3 +144,160 @@ h3 {
     background-attachment: scroll;
   }
 }
+@import url('https://fonts.googleapis.com/css?family=Prata|Questrial&display=swap');
+ html, body {
+	 width: 100%;
+	 height: 100vh;
+	 margin: 0;
+	 font-family: 'Questrial', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+	 color: #333;
+	 text-align: center;
+}
+ .carousel {
+	 position: relative;
+	 display: grid;
+	 grid-template-columns: 100px 1fr 100px;
+	 grid-template-rows: repeat(2, 60px) 1fr repeat(2, 60px);
+	 justify-items: center;
+	 align-items: center;
+	 justify-content: space-between;
+	 width: 100%;
+	 height: 100vh;
+}
+ .carousel.carousel--transition {
+	 pointer-events: none;
+}
+ .carousel__logo {
+	 grid-column: 1 / span 1;
+	 grid-row: 2 / span 1;
+}
+ .carousel__logo img {
+	 width: 65px;
+}
+ .carousel__controls {
+	 grid-column: 1 / span 1;
+	 grid-row: 3 / span 1;
+	 width: 20px;
+}
+ .carousel__controls__item {
+	 width: inherit;
+	 height: 60px;
+	 margin: 5px 0;
+	 cursor: pointer;
+}
+ .carousel__controls__item .carousel__controls__item__inner {
+	 width: 2px;
+	 height: inherit;
+	 margin: auto;
+	 background: #ccc;
+	 transition: background 0.2s ease-in;
+}
+ .carousel__controls__item.carousel__controls__item--active {
+	 pointer-events: none;
+}
+ .carousel__controls__item.carousel__controls__item--active .carousel__controls__item__inner {
+	 background: #333;
+}
+ .carousel__controls__item:hover .carousel__controls__item__inner {
+	 background: #eee;
+}
+ .carousel__display {
+	 position: relative;
+	 grid-column: 2 / span 1;
+	 grid-row: 2 / span 3;
+	 width: 100%;
+	 height: 100%;
+	 margin: 0;
+}
+ .carousel__display .carousel__display__content {
+	 position: absolute;
+	 top: 25%;
+	 left: 0;
+	 padding: 0 20px;
+	 text-align: left;
+}
+ .carousel__display .carousel__display__content .carousel__display__content__title {
+	 font-family: 'Prata', serif;
+	 font-size: 80px;
+}
+ .carousel__display .carousel__display__content .carousel__display__content__text {
+	 width: 50%;
+	 font-size: 85%;
+}
+ @media (screen and min-width: 1000px) {
+	 .carousel__display .carousel__display__content .carousel__display__content__text {
+		 width: 40%;
+	}
+}
+ .carousel__display .carousel__display__content .carousel__display__content__href {
+	 display: block;
+	 margin: 20px 0 0 0;
+	 font-weight: bold;
+	 text-decoration: none;
+	 color: #333;
+}
+ .carousel__display .carousel__display__content .carousel__display__content__href svg {
+	 width: 18px;
+	 height: 18px;
+	 margin: 0 0 0 2px;
+	 transition: margin 0.2s ease-in;
+}
+ .carousel__display .carousel__display__content .carousel__display__content__href:hover svg {
+	 margin: 0 0 0 6px;
+}
+ .carousel__display .carousel__display__image {
+	 position: relative;
+	 width: 93.5%;
+	 height: 100%;
+	 background-size: cover;
+	 float: right;
+}
+ .carousel__display .carousel__display__image::after {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background: #ddd;
+	 opacity: 0.5;
+}
+ .carousel__display.carousel__display--transition .carousel__display__image {
+	 animation: shrink-grow 1.5s linear;
+}
+ .carousel__display.carousel__display--transition .carousel__display__content__title {
+	 animation: fade-out-in 1.8s ease-in-out 0.2s;
+}
+ .carousel__display.carousel__display--transition .carousel__display__content__text {
+	 animation: fade-out-in 2s ease-in-out;
+}
+ .carousel__display.carousel__display--transition .carousel__display__content__href {
+	 animation: fade-out-in 1.5s ease-in-out 0.25s;
+}
+ @keyframes shrink-grow {
+	 33% {
+		 width: 0;
+	}
+	 to {
+		 width: attr(data-width);
+	}
+}
+ @keyframes fade-out-in {
+	 from {
+		 opacity: 1;
+		 transform: translateX(0);
+	}
+	 10% {
+		 opacity: 0;
+		 transform: translateX(100px);
+	}
+	 33% {
+		 opacity: 0;
+		 transform: translateX(-60px);
+	}
+	 to {
+		 opacity: 1;
+		 transform: translateX(0);
+	}
+}
+ 
