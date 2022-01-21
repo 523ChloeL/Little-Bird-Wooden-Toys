@@ -5,23 +5,36 @@ html {
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
 }
-button {
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   border: none;
   outline: 0;
-  display: inline-block;
   padding: 10px 25px;
   background-color: #ee9c5b;
+}
+
+.nav-pills .nav-link {
+  color: #white;
+  background-color: #ee9c5b;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: relative;
+  bottom: 10px;
+  width: 100%;
   text-align: center;
-  cursor: pointer;
 }
+
 a {
-  color: #fff;
-  font-style: normal;
+  color: #0D0D0D;
+  font-weight: normal;
+  font-variant: small-caps;
 }
-a:hover{
+
+a:hover {
   color: #fff;
   text-decoration: none;
 }
+
 .whiteDesc {
   color: black;
   background-color: #eeebc9;
@@ -29,6 +42,7 @@ a:hover{
   padding: 50px 80px;
   text-align: justify;
 }
+
 .desc {
   color: white;
   position: relative;
@@ -37,9 +51,10 @@ a:hover{
   padding: 50px 80px;
   text-align: justify;
 }
+
 .logo {
-  width: 450px;
-  height: 400px;
+  width: 250px;
+  height: 200px;
   border-width: thick;
   border-color: black;
   margin-top: 1px;
@@ -57,29 +72,32 @@ a:hover{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .bgimg-1 {
-  background-image: url("oustideBuilding.jpg");
+  background-image: url("outsideBuilding.jpg");
   min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("crissAngel.jpg");
+  background-image: url("wood.jpg");
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("shinLimColinCloud.jpg");
+  background-image: url("map.png");
   min-height: 400px;
 }
+
 .bgimg-4 {
-  background-image: url("sleightOfHand.jpg");
+  background-image: url("wood.jpg");
   min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .bgimg-5 {
-  background-image: url("houdini.png");
+  background-image: url("wood.jpg");
   min-height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -94,7 +112,15 @@ a:hover{
   text-align: center;
   color: #000;
 }
+
 .heading {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10%;
+}
+
+p {
   text-align: center;
 }
 
@@ -113,6 +139,7 @@ a:hover{
   font-size: 25px;
   letter-spacing: 10px;
 }
+
 .name {
   background-color: transparent;
   font-size: 25px;
@@ -129,6 +156,7 @@ h3 {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
+
   .bgimg-1,
   .bgimg-2,
   .bgimg-3,
@@ -137,79 +165,302 @@ h3 {
     background-attachment: scroll;
   }
 }
-* {
-  margin: 0; padding: 0;
+
+@import url('https://fonts.googleapis.com/css?family=Prata|Questrial&display=swap');
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Questrial', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  color: #333;
+  text-align: center;
 }
-body {
-  font-size: 100%;
+
+.carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: repeat(2, 60px) 1fr repeat(2, 60px);
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
 }
-.accordion {
-  width: 280px;
+
+.carousel.carousel--transition {
+  pointer-events: none;
 }
-.accordion h1, h2, h3, h4 {
+
+.carousel__logo {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.carousel__logo img {
+  width: 65px;
+}
+
+.carousel__controls {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  width: 20px;
+}
+
+.carousel__controls__item {
+  width: inherit;
+  height: 60px;
+  margin: 5px 0;
   cursor: pointer;
 }
-.accordion h2, h3, h4 {
-  font-family: "News Cycle";
+
+.carousel__controls__item .carousel__controls__item__inner {
+  width: 2px;
+  height: inherit;
+  margin: auto;
+  background: #ccc;
+  transition: background 0.2s ease-in;
 }
-.accordion h1 {
-  padding: 10px 15px;
-  background-color: #333;
-  font-family: Lobster;
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: #f2884b;
+
+.carousel__controls__item.carousel__controls__item--active {
+  pointer-events: none;
 }
-.accordion h1:hover {
-  color: #f2884b;
+
+.carousel__controls__item.carousel__controls__item--active .carousel__controls__item__inner {
+  background: #333;
 }
-.accordion h1:first-child {
-  border-radius: 10px 10px 0 0;
+
+.carousel__controls__item:hover .carousel__controls__item__inner {
+  background: #eee;
 }
-.accordion h1:last-of-type {
-  border-radius: 0 0 10px 10px;
+
+.carousel__display {
+  position: relative;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 3;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
-.accordion h1:not(:last-of-type) {
-  border-bottom: 1px dotted #f27b48;
+
+.carousel__display .carousel__display__content {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  padding: 0 20px;
+  text-align: left;
 }
-.accordion div, .accordion p {
-  display: none;
+
+.carousel__display .carousel__display__content .carousel__display__content__title {
+  font-family: 'Prata', serif;
+  font-size: 80px;
 }
-.accordion h2 {
-  padding: 5px 25px;
-  background-color: #f27b48;
-  font-size: 1.1rem;
-  color: #333;
+
+.carousel__display .carousel__display__content .carousel__display__content__text {
+  width: 50%;
+  font-size: 85%;
 }
-.accordion h2:hover {
-  background-color: #A65E44;
+
+@media (screen and min-width: 1000px) {
+  .carousel__display .carousel__display__content .carousel__display__content__text {
+    width: 40%;
+  }
 }
-.accordion h3 {
-  padding: 5px 30px;
-  background-color: #A65E44;
-  font-size: .9rem;
-  color: #ddd;
-}
-.accordion h3:hover {
-  background-color: #594343;
-}
-.accordion h4 {
-  padding: 5px 35px;
-  background-color: #594343;
-  font-size: .9rem;
-  color: #0D0D0D;
-}
-.accordion h4:hover {
-  background-color: #0D0D0D;
-}
-.accordion p {
-  padding: 15px 35px;
-  background-color: #ddd;
-  font-family: "Georgia";
-  font-size: .8rem;
-  color: #333;
-  line-height: 1.3rem;
-}
-.accordion .opened-for-codepen {
+
+.carousel__display .carousel__display__content .carousel__display__content__href {
   display: block;
+  margin: 20px 0 0 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.carousel__display .carousel__display__content .carousel__display__content__href svg {
+  width: 18px;
+  height: 18px;
+  margin: 0 0 0 2px;
+  transition: margin 0.2s ease-in;
+}
+
+.carousel__display .carousel__display__content .carousel__display__content__href:hover svg {
+  margin: 0 0 0 6px;
+}
+
+.carousel__display .carousel__display__image {
+  position: relative;
+  width: 93.5%;
+  height: 100%;
+  background-size: cover;
+  float: right;
+}
+
+.carousel__display .carousel__display__image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  opacity: 0.5;
+}
+
+.carousel__display.carousel__display--transition .carousel__display__image {
+  animation: shrink-grow 1.5s linear;
+}
+
+.carousel__display.carousel__display--transition .carousel__display__content__title {
+  animation: fade-out-in 1.8s ease-in-out 0.2s;
+}
+
+.carousel__display.carousel__display--transition .carousel__display__content__text {
+  animation: fade-out-in 2s ease-in-out;
+}
+
+.carousel__display.carousel__display--transition .carousel__display__content__href {
+  animation: fade-out-in 1.5s ease-in-out 0.25s;
+}
+
+@keyframes shrink-grow {
+  33% {
+    width: 0;
+  }
+
+  to {
+    width: attr(data-width);
+  }
+}
+
+@keyframes fade-out-in {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  10% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  33% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+html{scroll-behavior:smooth}
+}
+
+
+* {box-sizing: border-box}
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ee9c5b;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
 }
