@@ -7,23 +7,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="littlebird.css" />
-  <title>Little Bird Wooden Toys</title>
+  <title >Little Bird Wooden Toys</title>
 </head>
 
 <body>
-  <div class="bgimg-1">
+  <div class="bgimg-1" id="title">
     <div class="heading">
-      <div class="container">
+      <div class="container" >
         <img class="logo" src="Little Bird Toys Logo (1).png"></img><br><br>
         <ul class="nav nav-pills pill-primary">
           <li class="nav-item">
-            <a class="nav-link active" a href="#contact" href="index.html">Contact Us</a>
+            <a class="nav-link" href="#contact">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="order.html">Order Form</a>
+            <a class="nav-link" href="#order">Order Form</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="map.html">Map</a>
+            <a class="nav-link" href="#map">Map</a>
           </li>
         </ul>
       </div>
@@ -44,7 +44,7 @@
   </div>
 
   <div class="desc">
-    <h3>________</h3>
+    <h3>We at Little Bird Toys are committed to providing eco friendly, safe and high quality toys which nurture creativity and imagination in children, all the while being socially and environmentally responsible. We believe in simplicity and that a child’s intellectual, emotional, social and physical development happens in the best possible way, when the child is surrounded by nature.</h3>
     <p></p>
   </div>
 
@@ -61,7 +61,7 @@
 
   <div class="bgimg-3">
     <div class="caption">
-      <span class="name">-LOCATION-</span>
+      <span class="name" id="map">-LOCATION-</span>
     </div>
   </div>
 
@@ -96,7 +96,7 @@
               <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
             </label>
 
-            <p>By creating an account you agree to our <a href="https://docs.google.com/document/d/1bWIcmh4t_YdjiEIUZ1w0T_tiYs70CkqmodqJfIPoitA/edit?usp=sharing" target="_blank" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <p>By creating an account you agree to our <a href="https://docs.google.com/document/d/1H9I3eqdduePaFJM1IfAArmeNkGvtlDedbYEXnTrY708/edit?usp=sharing" target="_blank" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
             <div class="clearfix">
               <button type="submit" class="signup">Sign Up</button>
@@ -107,14 +107,23 @@
       </div>
     </div>
   </div>
+  <div class="footer"><a href="#title">Back to Top</a></div>
   <script>
-    < script type = "text/javascript" >
-      $(document).ready(function() {
-        $('.carousel').carousel({
-          interval: 7000
-        });
-      });
-  </script>
+  // Select required elements from the DOM
+      const modal = document.querySelector("#modal");
+      const body = document.querySelector("body");
+
+      const showModal = function (e) {
+          modal.classList.toggle("hidden");
+
+          if (!modal.classList.contains("hidden")) {
+              // Disable scroll
+              body.style.overflow = "hidden";
+          } else {
+              // Enable scroll
+              body.style.overflow = "auto";
+          }
+      };
   </script>
 
 </body>
