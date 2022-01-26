@@ -1,3 +1,6 @@
+function toggleForm(){
+  document.body.classList.toggle('activeForm');
+}
 $(document).ready(function(){
 // Activate Carousel
 $("#myCarousel").carousel();
