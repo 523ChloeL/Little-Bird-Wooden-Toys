@@ -2,22 +2,23 @@
 body,
 html {
   height: 100%;
-  margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
   text-align: center;
+  font-family: 'Mochiy Pop P One';
+  font-variant: small-caps;
 }
 button {
   border: none;
   outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
   background-color: #594343;
   text-align: center;
+  font-family: 'Mochiy Pop P One';
+  font-variant: small-caps;
 }
 .nav-item {
   background-color: #594343;
-  border-radius: 5px;
+  border-radius: 3px;
 
 }
 .carousel-inner > .item > img,
@@ -29,6 +30,7 @@ button {
 a {
   color: #0D0D0D;
   font-weight: normal;
+  font-family: 'Mochiy Pop P One';
   font-variant: small-caps;
 }
 a:hover{
@@ -41,14 +43,43 @@ a:hover{
   text-align: center;
   padding: 50px 80px;
   text-align: justify;
+  font-family: 'Mochiy Pop P One';
+  font-variant: small-caps;
+}
+h3 {
+  font-family: 'Mochiy Pop P One';
+  font-variant: small-caps;
 }
 .card-text {
   font-size: 12px;
   height: 30px;
 }
+.projects-text{
+  color: black;
+  background-color: rgba(44, 47, 51,0);
+  border-width: medium;
+  font-family: 'Mochiy Pop P One';
+  font-variant: small-caps;
+}
 .zoom {
   transition: transform .2s; /* Animation */
   margin: 0 auto;
+}
+.card-title {
+  color: black;
+  font-family: 'Mochiy Pop P One';
+  font-variant: small-caps;
+}
+.info-card{
+  background-color:transparent;
+  color: white;
+  border-width: medium;
+  border-color: white;
+  font-family: 'Mochiy Pop P One';
+  font-variant: small-caps;
+}
+.info-text{
+  color: white;
 }
 .card {
   height: 315px;
@@ -68,7 +99,6 @@ a:hover{
   height: 200px;
   border-width: thick;
   border-color: black;
-  margin-top: 1px;
 }
 
 .bgimg-1,
@@ -122,9 +152,7 @@ a:hover{
 }
 .heading {
   text-align: center;
-  margin: auto;
 width: 50%;
-padding: 10%;
 }
 p {
   text-align: center;
