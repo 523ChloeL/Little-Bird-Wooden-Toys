@@ -7,6 +7,7 @@ html {
   text-align: center;
   font-family: 'Mochiy Pop P One';
   font-variant: small-caps;
+  scroll-behavior: smooth;
 }
 button {
   border: none;
@@ -17,9 +18,11 @@ button {
   font-variant: small-caps;
 }
 .nav-item {
-  background-color: #594343;
+  background-color: #f2884b;
   border-radius: 3px;
-
+}
+button:hover {
+  color:white;
 }
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -45,6 +48,9 @@ a:hover{
   text-align: justify;
   font-family: 'Mochiy Pop P One';
   font-variant: small-caps;
+}
+.zoom:hover {
+  transform: scale(1.1);
 }
 h3 {
   font-family: 'Mochiy Pop P One';
@@ -182,7 +188,7 @@ p {
 h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
+  font-style: 20px "Lato", sans-serif;
   color: #111;
   text-align: center;
 }
@@ -201,4 +207,51 @@ footer {
   text-align: center;
   color: white;
   background-color: #111;
+}
+.center {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.center button {
+  width:150px;
+  height:40px;
+  font-weight:600;
+  box-shadow:3px 3px 2px 1px rgba(0,0,0,0.1);
+  cursor:pointer;
+}
+.click {
+  display: block;
+}
+#signUp {
+	margin-top: 10px;
+	padding: 0 20px 15px 20px;
+	border: 1px solid #bbb;
+}
+#signUp legend {
+	font-size: 2em;
+	font-weight: 200;
+	padding: 0 .2em;
+}
+#signUp label {
+	display: block;
+	padding-top: 1em;
+}
+#signUp label:first-of-type {
+	margin-top: -.9em;
+}
+#nameLabel {
+	margin-top: -1em;
+}
+#submit, #clearCookie {
+	display: block;
+	font-size: 1em;
+	color: #FFF;
+	text-transform: uppercase;
+	background: #a2a50d;
+	padding: .8em 1em .7em;
+	border: 0;
+	border-bottom: 3px solid #7d820c;
+	margin-top: 15px;
 }
