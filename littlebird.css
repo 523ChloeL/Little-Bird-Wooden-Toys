@@ -1,5 +1,4 @@
 
-
 body,
 html {
   height: 100%;
@@ -60,6 +59,7 @@ h3 {
 .card-text {
   font-size: 12px;
   height: 30px;
+
 }
 .projects-text{
   color: black;
@@ -79,7 +79,7 @@ h3 {
 }
 .info-card{
   background-color:transparent;
-  color: white;
+  color:#f2884b;
   border-width: medium;
   border-color: white;
   font-family: 'Mochiy Pop P One';
@@ -92,6 +92,7 @@ h3 {
   height: 415px;
   width: 250px;
   margin-top: 5px;
+  background-color:#f2884b;
 }
 .desc {
   color: white;
