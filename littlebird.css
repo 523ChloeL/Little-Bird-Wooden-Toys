@@ -46,6 +46,9 @@ a:hover{
   color: #fff;
   text-decoration: none;
 }
+.textfield {
+  width: 97%;
+}
 .whiteDesc {
   color: black;
   background-color: #eeebc9;
@@ -165,6 +168,7 @@ h3 {
 .heading {
   text-align: center;
 width: 50%;
+padding-top: 50px;
 }
 p {
   text-align: center;
