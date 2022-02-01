@@ -17,6 +17,9 @@ button {
   font-family: 'Mochiy Pop P One';
   font-variant: small-caps;
 }
+.nav {
+  justify-content: space-evenly;
+}
 .nav-item {
   background-color: #f2884b;
   border-radius: 3px;
@@ -28,6 +31,9 @@ button:hover {
   .carousel-inner > .item > a > img {
     width: 70%;
     margin: auto;
+  }
+  .carousel-caption {
+    color: black;
   }
 
 a {
@@ -194,15 +200,7 @@ h3 {
 }
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-  .bgimg-1,
-  .bgimg-2,
-  .bgimg-3,
-  .bg-img-4,
-  .bg-img-5 {
-    background-attachment: scroll;
-  }
-}
+
 footer {
   text-align: center;
   color: white;
