@@ -10,16 +10,16 @@
 				document.getElementById('nameField').value = 'Example: John Doe';
 			}
 		}
-	//delete the default phone field but not the user input
-	function clearPhone() {
-		if (document.getElementById('phoneField').value == 'Example: 212-123-1234'){
-			document.getElementById('phoneField').value = '';
+	//delete the default address field but not the user input
+	function clearAddress() {
+		if (document.getElementById('addressField').value == 'Example: 805 W Manchester Blvd, Inglewood, CA 90301, USA'){
+			document.getElementById('addressField').value = '';
 		}
 	}
-	//bring back the default text if phone field is empty
-		function resetPhone() {
-			if (document.getElementById('phoneField').value == ''){
-				document.getElementById('phoneField').value = 'Example: 212-123-1234';
+	//bring back the default text if address field is empty
+		function resetAddress() {
+			if (document.getElementById('addressField').value == ''){
+				document.getElementById('addressField').value = 'Example: 805 W Manchester Blvd, Inglewood, CA 90301, USA';
 			}
 		}
 		//delete the default email field but not the user input
