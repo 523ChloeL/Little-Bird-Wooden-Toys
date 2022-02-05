@@ -19,18 +19,20 @@ const appData = [
   },
 ];
 
-const App = () => <Carousel data={appData} />;
+<script>
+		var states = document.getElementById('states');
+		states.onchange = function(){
+			console.log('state index: ' + states.selectedIndex);
+			console.log('state name: ' + states.options[states.selectedIndex].text);
+			console.log('img/' + states.value +  '@blocks.jpg');
+			document.getElementById('postcard').style.backgroundImage = 'url(img/' + states.value + 'car1.jpg)';
+			document.getElementById('greeting').innerHTML = 'Greetings from';
+			document.getElementById('state-heading').innerHTML = states.options[states.selectedIndex].text;
+		}
+	</script>
 
-class Carousel extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      data: [],
-      index: 0,
-      startingUp: false,
-      inTransition: false,
-    }
-  }
+
+
 
   handleSelect = (e) => {
     const imgNode = document.getElementById('carouselImage');
