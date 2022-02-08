@@ -348,27 +348,21 @@
   	border-bottom: 3px solid #f27b48;
   	margin-top: 15px;
   }
+  .second-step{
+    margin: 0px;
+  }
   #toy-pic {
-	width: 280px;
-	height: 202px;
-	position: absolute;
+	width: 450px;
+	height: 302px;
+	position: relative;
 	background-image: url('unknownItem.jpg');
 	background-size: cover;
-	padding-top: 58px;
-}
-#toy-name {
-	text-align: center;
-	font-size: 19px;
-	color: #fdfcfc;
-	margin-bottom: 2px;
+  padding-bottom: 10px;
+  margin: 0px;
 }
 #toy-desc {
-	font-weight: bold;
 	text-align: center;
-	text-transform: uppercase;
-	font-size: 35px;
-	line-height: 1.1;
-	color: #fff;
-	float: left;
-	width: 100%;
+	font-size: 19px;
+	color: black;
+	margin-bottom: 2px;
 }
