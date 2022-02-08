@@ -342,9 +342,33 @@
   	font-size: 1em;
   	color: #FFF;
   	text-transform: uppercase;
-  	background: #a2a50d;
+  	background: #f2884b;
   	padding: .8em 1em .7em;
   	border: 0;
-  	border-bottom: 3px solid #7d820c;
+  	border-bottom: 3px solid #f27b48;
   	margin-top: 15px;
   }
+  #toy-pic {
+	width: 280px;
+	height: 202px;
+	position: absolute;
+	background-image: url('unknownItem.jpg');
+	background-size: cover;
+	padding-top: 58px;
+}
+#toy-name {
+	text-align: center;
+	font-size: 19px;
+	color: #fdfcfc;
+	margin-bottom: 2px;
+}
+#toy-desc {
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 35px;
+	line-height: 1.1;
+	color: #fff;
+	float: left;
+	width: 100%;
+}
