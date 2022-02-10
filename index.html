@@ -45,7 +45,7 @@
     <div class="outer-wrapper">
       <div class="content-wrapper">
         <main role="main">
-          <div class="first step">
+          <div class="first-step">
             <h2>1. Select a Toy.</h2>
             <select name="toys" id="toys">
               <option selected disabled value="empty-state">Pick One</option>
@@ -58,7 +58,13 @@
           </div>
           <div class="second-step">
             <h2>2. View them here!</h2>
-            <div id="toy-pic"></div>
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <div id="toy-pic"></div>
+              </div>
+              <div class="col-md-4"></div>
+            </div>
             <div>
               <p id="toy-desc">Information about the toy will appear here.</p>
             </div>
